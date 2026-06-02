@@ -1,34 +1,10 @@
-# IM-System: Production-Ready Inventory & Order Management System
+# Inventory & Order Management System
 
 A high-fidelity, containerized full-stack application designed for businesses to manage products, customers, and sale invoices. Built using a modern technical assessment standard, this repository illustrates clean software engineering principles, transactional safety, and polished visual aesthetics suitable for a Software Engineer at a high-paced AI startup.
 
----
 
-## Technical Stack Architecture
 
-The system utilizes a modern, robust, and asynchronous architecture with three main container services:
 
-```mermaid
-graph TD
-    subgraph Client ["Client (Browser)"]
-        React["React & Vite Frontend<br>(Vanilla CSS + Lucide Icons)"]
-    end
-
-    subgraph ServiceOrchestration ["Docker Compose Orhchestrator"]
-        Nginx["Nginx Service<br>(Port 80)"]
-        FastAPI["FastAPI Web API<br>(Port 8000)"]
-        Postgres["PostgreSQL Database<br>(Port 5432)"]
-    end
-
-    React <--> |HTTP / JSON| Nginx
-    Nginx <--> |Reverse Proxy / Static Files| FastAPI
-    FastAPI <--> |SQLAlchemy ORM| Postgres
-```
-
-- **Frontend**: **React** (scaffolded via **Vite**) styled with a beautiful premium dark glassmorphism design system. Complete with real-time stat cards, responsive lists, inline validations, and dynamic multi-item invoice building with live pricing.
-- **Backend API**: **Python FastAPI** providing robust OpenAPI self-documentation, schemas verification via **Pydantic**, and persistent database operations via **SQLAlchemy**.
-- **Database**: **PostgreSQL 16** with automatic table schemas generation and named volume data persistence.
-- **Orchestration**: Fully dockerized and managed with a unified **Docker Compose** configuration including healthcheck synchronizations.
 
 ---
 
@@ -154,9 +130,4 @@ If running outside Docker containers:
    ```bash
    npm run dev
    ```
-   Open `http://localhost:5173` to test.
-
----
-
-## Author
-**Sairaj Naikwade**
+  
